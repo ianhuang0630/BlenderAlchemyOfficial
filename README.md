@@ -3,7 +3,7 @@
 </div>
 
 # [BlenderAlchemy](https://ianhuang0630.github.io/BlenderAlchemyWeb/)
-[Getting Started ](#quick-start) | [Website]("https://ianhuang0630.github.io/BlenderAlchemyWeb/") | [Paper](https://arxiv.org/abs/2404.17672) 
+[Getting Started](#quick-start) | [Website](https://ianhuang0630.github.io/BlenderAlchemyWeb/) | [Paper](https://arxiv.org/abs/2404.17672) 
 
 <div align="center">
 <img src="docs/images/blenderalchemy_pipeline.png"></img>
