@@ -1,0 +1,34 @@
+task:
+  type: "shapekey"
+
+
+credentials:
+  openai: creds/openai.txt
+  claude: 
+  gemini:
+
+input:
+  text_prompt: "a female character that's saying 'Ugh, this milk has gone bad. It smells awful!'"
+  input_image: 
+  target_code:
+
+output:
+  output_dir: "output/winky_face/"
+
+run_config:
+  blender_command: "infinigen/blender/blender"
+  edit_style: "rewrite_code"
+  num_tries: 4
+  enable_visual_imagination: False 
+  enable_hypothesis_reversion: True
+  variants: 
+    - "tune"
+  tree_dims: 
+    - "4x8"
+  edit_generator_type: "GPT4V"
+  state_evaluator_type: "GPT4V"
+
+  max_concurrent_rendering_processes: 8
+  max_concurrent_evaluation_requests: 4
+  max_concurrent_generator_requests: 8
+
