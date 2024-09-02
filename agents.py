@@ -11,7 +11,6 @@ import random
 
 from utils.image import horiz_concat, plot_image_grid, pltfig_to_PIL
 from utils.code import get_code_as_string, get_macroed_code
-from metrics import *
 
 from loguru import logger
 import threading

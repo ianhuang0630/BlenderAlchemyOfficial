@@ -178,6 +178,7 @@ git clone git@github.com:ianhuang0630/TaskSolver.git
 # ... and install as package
 cd TaskSolver
 pip install -e .
+pip install matplotlib torch torchvision torchaudio 
 cd ../
 ```
 
@@ -186,6 +187,7 @@ cd ../
 cd BlenderAlchemyOfficial 
 git clone https://github.com/princeton-vl/infinigen.git
 cd infinigen
+git checkout 331b4e5  # important, since we need to revert back to an earlier version for the code to run successfully
 INFINIGEN_MINIMAL_INSTALL=True bash scripts/install/interactive_blender.sh
 cd ..
 ```
