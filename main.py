@@ -48,23 +48,23 @@ if __name__ == "__main__":
     desc = config["input"]["text_prompt"]
 
 
-    # if config["run_config"]["enable_visual_imagination"]:
-    #     assert config["run_config"]["num_tries"] > 0, "number of starter images should be positive if imagination is on."
-    #     download_paths = []
-    #     for i in range(config["run_config"]["num_tries"]):     # The number of starer_images entered in cmd line
-    #         response = client.images.generate(
-    #             model="dall-e-3",
-    #             prompt=f"Close-up photorealistic rendering of {desc}",
-    #             size="1024x1024",
-    #             quality="standard",
-    #             n=1,
-    #         )
-    #         download_paths.append(response.data[0].url)
+    if config["run_config"]["enable_visual_imagination"]:
+        assert config["run_config"]["num_tries"] > 0, "number of starter images should be positive if imagination is on."
+        download_paths = []
+        for i in range(config["run_config"]["num_tries"]):     # The number of starer_images entered in cmd line
+            response = client.images.generate(
+                model="dall-e-3",
+                prompt=f"Close-up photorealistic rendering of {desc}",
+                size="1024x1024",
+                quality="standard",
+                n=1,
+            )
+            download_paths.append(response.data[0].url)
 
-    #     for instance_idx, url in enumerate(download_paths):     # Saved the generated images based on description
-    #         download_to = output_dir/f"target_instance{instance_idx}.png"
-    #         urllib.request.urlretrieve(url, download_to)
-    #         logger.info(f"Saved generated image to {download_to}.")
+        for instance_idx, url in enumerate(download_paths):     # Saved the generated images based on description
+            download_to = output_dir/f"target_instance{instance_idx}.png"
+            urllib.request.urlretrieve(url, download_to)
+            logger.info(f"Saved generated image to {download_to}.")
 
     for instance_idx in range(config["run_config"]["num_tries"]):
         for var in variants:
