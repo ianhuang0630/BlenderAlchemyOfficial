@@ -32,11 +32,13 @@ class TaskSetting(Enum):
     MATERIAL = 2
     SHAPEKEY = 3
     GEONODES = 4
+    PLACEMENT = 5
 
 TASKSETTING2PROMPTMODULE = {TaskSetting.GEONODES: "geonodes",
                             TaskSetting.LIGHTING: "lighting",
                             TaskSetting.MATERIAL: "material",
-                            TaskSetting.SHAPEKEY: "shapekey"}
+                            TaskSetting.SHAPEKEY: "shapekey",
+                            TaskSetting.PLACEMENT: "placement"}
 
 def tree_branch(branching_factor:int, question_to_agent:Question, agent:Agent,
                 script_save:Path, render_save:Path, thoughtprocess_save:Path,

@@ -1,0 +1,33 @@
+task:
+  type: "placement"
+
+
+credentials:
+  openai: creds/openai.txt
+  claude: 
+  gemini:
+
+input:
+  text_prompt: "A modern livingroom with a sofa anda table, with a painting on the front and center of the wall and a plant between the sofa and the window wall. Another stack of books sits on the top of the coffee table." 
+  input_image: 
+  target_code:
+
+output:
+  output_dir: "output/livingroom_placement/"
+
+run_config:
+  blender_command: "infinigen/blender/blender"
+  edit_style: "edit_code"
+  num_tries: 4
+  enable_visual_imagination: False 
+  enable_hypothesis_reversion: True
+  variants: 
+    - "tune_leap"
+  tree_dims: 
+    - "4x8"
+  edit_generator_type: "GPT4V"
+  state_evaluator_type: "GPT4V"
+
+  max_concurrent_rendering_processes: 8
+  max_concurrent_evaluation_requests: 4
+  max_concurrent_generator_requests: 8
