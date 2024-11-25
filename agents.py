@@ -35,7 +35,7 @@ class GeneralAgent(Agent):
     Agent that answers questions in a certain format.
     """
     def __init__(self, api_key:str, task:TaskSpec,
-                 vision_model:str="gpt-4-vision-preview",
+                 vision_model:str="gpt-4-turbo" 
                  ):
         super().__init__(api_key=api_key,  task=task,
                         vision_model=vision_model,
