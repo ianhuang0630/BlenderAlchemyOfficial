@@ -382,7 +382,7 @@ def refinement(config, credentials, breadth, depth, blender_file, blender_script
 
 
     assert thinker_is_visual is not None and evaluator_is_visual is not None, "Remember to assign these variables above."
-    if evaluator_is_visual or thinker_is_visual:
+    if not evaluator_is_visual or not thinker_is_visual:
         assert target_description is not None, "When either the thinker or evaluator is not visual, make sure that you have the target description."
 
     
